@@ -1,12 +1,12 @@
 # Memory-Allocation-
-About
+## About
 This project simulates how an operating system manages memory using segmentation — a technique that divides a process into logical units (Code, Data, Stack) each with a variable size. Unlike paging, segmentation reflects the programmer's view of memory.
 The simulator allows you to define memory holes, create processes with multiple segments, and allocate/deallocate them using either First Fit or Best Fit — all visualized in real time.
 
 Supported Allocation Strategies
 StrategyDescriptionFirst FitPlaces each segment in the first hole large enough to fit it — fast but may leave gapsBest FitScans all holes and picks the smallest sufficient one — minimizes leftover fragments
 
-Features
+## Features
 
 🧠 Segmentation-based allocation — each process has named segments (Code, Data, Stack, etc.) with individual sizes
 🎨 Live memory layout — proportional vertical bar with unique colors per process, green for free holes
@@ -16,21 +16,21 @@ Features
 ❌ Allocation failure handling — displays an error if a process cannot be fully placed in memory
 
 
-Tech Stack
+## Tech Stack
 
 Java — core logic and data structures
 JavaFX — GUI, Canvas-based memory visualization, and TableView
 OOP Design — clean separation across Segment, Process, MemoryBlock, and MemoryGUI classes
 
 
-Project Structure
+## Project Structure
 ├── Segment.java          # Holds segment name, size, and base address
 ├── Process.java          # Groups a process name with its list of segments
 ├── MemoryBlock.java      # Represents a free hole or allocated partition in memory
 ├── MemorySimulator.java  # Core allocation and deallocation logic
 └── MemoryGUI.java        # JavaFX interface and visualization
 
-How to Use
+## How to Use
 
 Set the total memory size and click Initialize Memory
 Add initial free holes with start address and size, then click Build Memory
@@ -40,7 +40,7 @@ Click Allocate Process — the memory layout and segment table update instantly
 To free memory, enter a process name and click Deallocate — adjacent holes are merged automatically
 
 
-What I Learned
+## What I Learned
 
 Implementing segmentation-based memory allocation from scratch
 Comparing First Fit vs Best Fit strategies and understanding their trade-offs
